@@ -27,3 +27,8 @@
 *.exe
 *.out
 *.app
+
+*.obj
+*.tds
+*.map
+*.il*

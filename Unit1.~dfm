@@ -1,9 +1,9 @@
 object Form1: TForm1
-  Left = 441
-  Top = 182
+  Left = 526
+  Top = 213
   AutoScroll = False
-  Caption = 'TeaCPc'
-  ClientHeight = 288
+  Caption = 'QBPaint Converter VCL'
+  ClientHeight = 269
   ClientWidth = 343
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -46,6 +46,7 @@ object Form1: TForm1
     0003000000030000000300000003000000030000000300000003000000030000
     0003000000030000000300000003000000030000000300000003000000030000
     00030000000300000003000000030000000300000003}
+  Menu = MainMenu1
   OldCreateOrder = True
   PopupMenu = PopupMenu1
   Position = poDefaultPosOnly
@@ -57,14 +58,14 @@ object Form1: TForm1
     Left = 0
     Top = 0
     Width = 343
-    Height = 268
+    Height = 249
     Align = alClient
   end
   object Image1: TImage
     Left = 0
     Top = 0
     Width = 343
-    Height = 268
+    Height = 249
     Align = alClient
     AutoSize = True
     Center = True
@@ -2955,7 +2956,7 @@ object Form1: TForm1
   end
   object Panel1: TPanel
     Left = 0
-    Top = 268
+    Top = 249
     Width = 343
     Height = 20
     Align = alBottom
@@ -2963,10 +2964,11 @@ object Form1: TForm1
     Locked = True
     TabOrder = 0
     object ProgressBar1: TProgressBar
-      Left = 4
-      Top = 5
-      Width = 244
-      Height = 12
+      Left = 0
+      Top = 0
+      Width = 343
+      Height = 20
+      Align = alClient
       Min = 0
       Max = 100
       Step = 1
@@ -2995,32 +2997,55 @@ object Form1: TForm1
       Caption = 'Skala...'
       OnClick = Skala111Click
     end
-    object Stretch1: TMenuItem
-      Caption = 'E&xit'
+    object Stretchtowindow1: TMenuItem
+      Caption = 'Stretch to window'
+      RadioItem = True
       OnClick = Stretch1Click
     end
-    object About1: TMenuItem
-      Caption = '&About'
-      OnClick = About1Click
+    object N2: TMenuItem
+      Caption = '-'
     end
     object Exit1: TMenuItem
-      Caption = 'E&xit'
+      Caption = 'E&XIT'
       OnClick = Exit1Click
+    end
+    object About1: TMenuItem
+      Caption = '&About and license'
+      OnClick = About1Click
     end
   end
   object OpenDialog1: TOpenDialog
     Filter = 
-      'Grafika (*.bmp,*.gft,*.wmf,*.emf,*.ico)|*.bmp;*.gft;*.wmf;*.emf;' +
-      '*.ico'
+      'Grafika (*.BMP,*.GFT,*.WMF,*.EMF,*.ICO)|*.BMP;*.GFT;*.WMF;*.EMF;' +
+      '*.ICO'
     Left = 100
     Top = 76
   end
   object SaveDialog1: TSaveDialog
     Filter = 
-      'Grafika (*.bmp,*.gft,*.wmf,*.emf,*.ico)|*.bmp;*.gft;*.wmf;*.emf;' +
-      '*.ico'
+      'Grafika (*.bmp,*.GFT,*.wmf,*.emf,*.ico)|*.BMP;*.GFT;*.WMF;*.EMF;' +
+      '*.ICO'
     Options = [ofOverwritePrompt]
     Left = 36
     Top = 76
+  end
+  object MainMenu1: TMainMenu
+    Left = 80
+    Top = 152
+    object Open2: TMenuItem
+      Caption = 'Open'
+      OnClick = Open1Click
+    end
+    object Save2: TMenuItem
+      Caption = 'Save as...'
+      OnClick = SaveAs1Click
+    end
+    object Scale1: TMenuItem
+      Caption = '|'
+    end
+    object Exit2: TMenuItem
+      Caption = 'EXIT'
+      OnClick = Exit1Click
+    end
   end
 end

@@ -32,9 +32,15 @@ __published:	// IDE-managed Components
 	TMenuItem *SaveAs1;
 	TBevel *Bevel1;
 	TImage *Image1;
-	TMenuItem *Stretch1;
 	TMenuItem *N1;
     TMenuItem *Skala111;
+    TMainMenu *MainMenu1;
+    TMenuItem *N2;
+    TMenuItem *Open2;
+    TMenuItem *Save2;
+    TMenuItem *Exit2;
+    TMenuItem *Scale1;
+    TMenuItem *Stretchtowindow1;
 	void __fastcall Exit1Click(TObject *Sender);
 	void __fastcall Open1Click(TObject *Sender);
 	void __fastcall Save1Click(TObject *Sender);

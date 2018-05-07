@@ -1,5 +1,6 @@
 //---------------------------------------------------------------------------
 #include <vcl\vcl.h>
+#include <Controls.hpp>
 #pragma hdrstop
 #include "Unit2.h"
 #include "Unit1.h"
@@ -139,14 +140,11 @@ else
          }
     Image1->Left = 1;
     Image1->Width = ++XMax;
-    Form1->ClientWidth = XMax + 2;
-
     Image1->Top = 1;
     Image1->Height = ++YMax;
-    Form1->ClientHeight = YMax + 22;
-
-    ProgressBar1->Width = Form1->ClientWidth-8;
     Form1->ProgressBar1->Position=0;
+    if (XMax>200) Form1->ClientWidth = XMax + 2;
+    if (YMax>300) Form1->ClientHeight = YMax + Panel1->Height;
 
     plik2.close();
 
@@ -155,9 +153,9 @@ else
     remove(AnsiString(NazwaPlikuSave+".bmp").c_str());
    }
 }
-catch (...) { First = false; ShowMessage("Cosik siê skisi³o i niepowiod³o"); }
+catch (...) { First = false; ShowMessage("Unknown ERROR"); }
 
-Form1->Caption= "TeaCPc "+ ExtractFileName(NazwaPliku)+
+Form1->Caption= "QBPaint Converter "+ ExtractFileName(NazwaPliku)+
                 " "+(String)Image1->Picture->Width + " X " + (String)Image1->Picture->Height + " | "+
                 (String)Image1->Width + " X " +(String)Image1->Height;
 First = false;
@@ -175,9 +173,9 @@ Robie=true;
 if (Original==false)
    {
     NazwaPlikuSave.Delete(Dlugo-2,3);
-    NazwaPlikuSave.Insert("gft",Dlugo-2);
+    NazwaPlikuSave.Insert("GFT",Dlugo-2);
    }
-if (NazwaPlikuSave=="*.gft")
+if (NazwaPlikuSave=="*.GFT")
    {
     SaveAs1Click(Sender);
    }
@@ -250,7 +248,7 @@ ProgressBar1->Width = Form1->ClientWidth - 8;
 Form1->ProgressBar1->Position = 0;
 }
 }
-catch (...) { ShowMessage("Coœ siê skisi³o i niepowiod³o :("); }
+catch (...) { ShowMessage("Unknown ERROR"); }
 
 Original = false;
 Robie = false;
@@ -259,7 +257,7 @@ FormResize(Sender);
 //---------------------------------------------------------------------------
 void __fastcall TForm1::About1Click(TObject *Sender)
 {
-AboutForm->ShowModal();
+if (AboutForm->ShowModal()!=mrOk) Close();
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm1::SaveAs1Click(TObject *Sender)
@@ -287,13 +285,13 @@ Save1Click(Sender);
 void __fastcall TForm1::FormResize(TObject *Sender)
 {
 ProgressBar1->Width = Form1->ClientWidth-8;
-Form1->Caption= "TeaCPc "+ ExtractFileName(NazwaPliku)+
+Form1->Caption= "QBPain Converter "+ ExtractFileName(NazwaPliku)+
                 " "+(String)XMax + " X "+(String)YMax + " | "+
                 (String)Image1->Width + " X " +(String)Image1->Height;
 if (First==true)
     return; // jesli otwierany nowy plik to wróæ
 
-if (Stretch1->Checked==true)
+if (Stretchtowindow1->Checked==true)
    {
     Image1->Height = Bevel1->Height-2;
     Image1->Width  = Bevel1->Width-2;
@@ -349,7 +347,7 @@ void __fastcall TForm1::Stretch1Click(TObject *Sender)
 if (Robie == true) return;
 
 Robie = true;
-Stretch1->Checked = !Stretch1->Checked;
+Stretchtowindow1->Checked = !Stretchtowindow1->Checked;
 Robie = false;
 
 FormResize(Sender);
@@ -364,7 +362,9 @@ Form2->Show();
 
 void __fastcall TForm1::FormShow(TObject *Sender)
 {
-AboutForm->ShowModal();
+if (AboutForm->ShowModal()!=mrOk) Close();
 }
 //---------------------------------------------------------------------------
+
+
 

@@ -11,20 +11,16 @@ File_8=SourceModule,'D:\My Projects\aktualne prc++\x86_libraries\SSTSOFT\text\ts
 File_9=SourceModule,'D:\My Projects\aktualne prc++\x86_libraries\SSTSOFT\mem\tsoft_mem32.h',0,1,25,16,52,0,0
 
 [Modules]
-Module0=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Qonverter.VCL\Unit1.cpp
-Module1=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Qonverter.VCL\TEAIMAGE.bpr
-Module2=C:\PROGRAM FILES\BORLAND\CBUILDER5\INCLUDE\VCL\forms.hpp
-Count=3
+Module0=D:\stasiek\My Projects\OBSOLETE\PROGS\Qonverter.VCL\Unit1.cpp
+Module1=C:\PROGRAM FILES\BORLAND\CBUILDER5\INCLUDE\VCL\forms.hpp
+Module2=D:\stasiek\My Projects\OBSOLETE\FORM_TEMPLATES\About_frm.cpp
+Module3=D:\stasiek\My Projects\OBSOLETE\PROGS\Qonverter.VCL\Unit2.cpp
+Count=4
 EditWindowCount=1
 
-[D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Qonverter.VCL\Unit1.cpp]
+[D:\stasiek\My Projects\OBSOLETE\PROGS\Qonverter.VCL\Unit1.cpp]
 ModuleType=SourceModule
 FormState=1
-FormOnTop=0
-
-[D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Qonverter.VCL\TEAIMAGE.bpr]
-ModuleType=SourceModule
-FormState=0
 FormOnTop=0
 
 [C:\PROGRAM FILES\BORLAND\CBUILDER5\INCLUDE\VCL\forms.hpp]
@@ -32,16 +28,32 @@ ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[C:\Program Files\Borland\CBuilder5\Projects\ProjectGroup1.bpg]
+[D:\stasiek\My Projects\OBSOLETE\FORM_TEMPLATES\About_frm.cpp]
+ModuleType=SourceModule
+FormState=1
+FormOnTop=0
+
+[D:\stasiek\My Projects\OBSOLETE\PROGS\Qonverter.VCL\Unit2.cpp]
+ModuleType=SourceModule
+FormState=1
+FormOnTop=1
+
+[D:\stasiek\My Projects\OBSOLETE\PROGS\Qonverter.VCL\ProjectGroup1.bpg]
+FormState=0
+FormOnTop=0
+
+[D:\stasiek\My Projects\OBSOLETE\PROGS\Qonverter.VCL\TEAIMAGE.bpr]
 FormState=0
 FormOnTop=0
 
 [EditWindow0]
-ViewCount=3
-CurrentView=2
+ViewCount=5
+CurrentView=1
 View0=0
 View1=1
 View2=2
+View3=3
+View4=4
 MessageView=MessageView@EditWindow0
 Create=1
 Visible=1
@@ -70,17 +82,31 @@ TopLine=645
 LeftCol=1
 
 [View1]
-Module=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Qonverter.VCL\TEAIMAGE.cpp
-CursorX=53
-CursorY=17
-TopLine=1
+Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Qonverter.VCL\Unit1.cpp
+CursorX=5
+CursorY=260
+TopLine=252
 LeftCol=1
 
 [View2]
-Module=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Qonverter.VCL\Unit1.cpp
-CursorX=2
-CursorY=367
-TopLine=353
+Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Qonverter.VCL\Unit2.cpp
+CursorX=1
+CursorY=25
+TopLine=19
+LeftCol=1
+
+[View3]
+Module=D:\stasiek\My Projects\OBSOLETE\FORM_TEMPLATES\About_frm.cpp
+CursorX=3
+CursorY=132
+TopLine=128
+LeftCol=1
+
+[View4]
+Module=D:\stasiek\My Projects\OBSOLETE\FORM_TEMPLATES\About_frm.h
+CursorX=1
+CursorY=1
+TopLine=1
 LeftCol=1
 
 [Watches]
@@ -103,9 +129,9 @@ Width=1271
 Height=105
 MaxLeft=-1
 MaxTop=-1
-MaxWidth=1280
+MaxWidth=1288
 MaxHeight=105
-ClientWidth=1272
+ClientWidth=1280
 ClientHeight=78
 
 [ProjectManager]
@@ -123,6 +149,23 @@ ClientHeight=279
 TBDockHeight=303
 LRDockWidth=438
 Dockable=1
+
+[CPUWindow]
+Create=1
+Visible=0
+State=0
+Left=373
+Top=223
+Width=533
+Height=353
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=525
+ClientHeight=326
+DumpPane=79
+DisassemblyPane=187
+RegisterPane=231
+FlagPane=64
 
 [AlignmentPalette]
 Create=1
@@ -154,8 +197,8 @@ LRDockWidth=190
 Dockable=1
 SplitPos=88
 ArrangeBy=Name
-SelectedItem=OnActivate
-ExpandedItems=Font
+SelectedItem=OnClick
+ExpandedItems=Font,Font.Style
 HiddenCategories=
 ShowStatusBar=1
 
