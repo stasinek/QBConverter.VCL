@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form1</class>
+ <widget class="QWidget" name="Form1">
+  <property name="geometry">
+   <rect>
+    <x>526</x>
+    <y>213</y>
+    <width>343</width>
+    <height>269</height>
+   </rect>
+  </property>
+  <property name="toolTip">
+   <string></string>
+  </property>
+  <property name="windowTitle">
+   <string>QBPaint Converter VCL</string>
+  </property>
+  <widget class="QFrame" name="Bevel1">
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>343</width>
+     <height>249</height>
+    </rect>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Sunken</enum>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QGraphicsView" name="Image1">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>343</width>
+     <height>249</height>
+    </rect>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Panel1">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>249</y>
+     <width>343</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string></string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="alignment">
+    <enum>Qt::AlignCenter</enum>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <widget class="QProgressBar" name="ProgressBar1">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>343</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="toolTip">
+     <string></string>
+    </property>
+   </widget>
+  </widget>
+  <addaction name="Open1"/>
+  <action name="Open1">
+   <property name="text">
+    <string>&amp;Open...</string>
+   </property>
+  </action>
+  <addaction name="Save1"/>
+  <action name="Save1">
+   <property name="text">
+    <string>&amp;Zapisz...</string>
+   </property>
+  </action>
+  <addaction name="SaveAs1"/>
+  <action name="SaveAs1">
+   <property name="text">
+    <string>Zapisz ja&amp;ko...</string>
+   </property>
+  </action>
+  <addaction name="separator"/>
+  <addaction name="Skala111"/>
+  <action name="Skala111">
+   <property name="text">
+    <string>Skala...</string>
+   </property>
+  </action>
+  <addaction name="Stretchtowindow1"/>
+  <action name="Stretchtowindow1">
+   <property name="text">
+    <string>Stretch to window</string>
+   </property>
+  </action>
+  <addaction name="separator"/>
+  <addaction name="Exit1"/>
+  <action name="Exit1">
+   <property name="text">
+    <string>E&amp;XIT</string>
+   </property>
+  </action>
+  <addaction name="About1"/>
+  <action name="About1">
+   <property name="text">
+    <string>&amp;About and license</string>
+   </property>
+  </action>
+  <widget class="QFrame" name="OpenDialog1">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>76</y>
+     <width>15</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+  </widget>
+  <widget class="QFrame" name="SaveDialog1">
+   <property name="geometry">
+    <rect>
+     <x>36</x>
+     <y>76</y>
+     <width>15</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+  </widget>
+  <widget class="QMenuBar" name="MainMenu1">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>152</y>
+     <width>343</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <widget class="QMenu" name="Open2">
+    <property name="title">
+     <string>Open</string>
+    </property>
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="toolTip">
+     <string></string>
+    </property>
+   </widget>
+   <addaction name="Open2"/>
+   <widget class="QMenu" name="Save2">
+    <property name="title">
+     <string>Save as...</string>
+    </property>
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="toolTip">
+     <string></string>
+    </property>
+   </widget>
+   <addaction name="Save2"/>
+   <widget class="QMenu" name="Scale1">
+    <property name="title">
+     <string>|</string>
+    </property>
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="toolTip">
+     <string></string>
+    </property>
+   </widget>
+   <addaction name="Scale1"/>
+   <widget class="QMenu" name="Exit2">
+    <property name="title">
+     <string>EXIT</string>
+    </property>
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="toolTip">
+     <string></string>
+    </property>
+   </widget>
+   <addaction name="Exit2"/>
+  </widget>
+ </widget>
+</ui>
