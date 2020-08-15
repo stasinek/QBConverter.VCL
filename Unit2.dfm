@@ -5,7 +5,7 @@ object Form2: TForm2
   BorderStyle = bsDialog
   Caption = 'Skala...'
   ClientHeight = 52
-  ClientWidth = 168
+  ClientWidth = 228
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,16 +19,17 @@ object Form2: TForm2
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 168
+    Width = 228
     Height = 52
     Align = alClient
     BevelOuter = bvLowered
     TabOrder = 0
     object SpeedButton1: TSpeedButton
-      Left = 80
+      Left = 139
       Top = 8
       Width = 41
       Height = 37
+      Anchors = [akTop, akRight, akBottom]
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -52,10 +53,11 @@ object Form2: TForm2
       OnClick = SpeedButton1Click
     end
     object SpeedButton2: TSpeedButton
-      Left = 124
+      Left = 183
       Top = 8
       Width = 37
       Height = 37
+      Anchors = [akTop, akRight, akBottom]
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         0400000000000001000000000000000000001000000010000000000000000000
@@ -72,12 +74,27 @@ object Form2: TForm2
       NumGlyphs = 2
       OnClick = SpeedButton2Click
     end
+    object Label1: TLabel
+      Left = 104
+      Top = 16
+      Width = 23
+      Height = 23
+      Caption = '%'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpFixed
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
     object CSpinEdit1: TCSpinEdit
       Left = 8
       Top = 8
-      Width = 65
-      Height = 35
+      Width = 89
+      Height = 37
       TabStop = True
+      Anchors = [akLeft, akTop, akRight, akBottom]
       DragCursor = crDefault
       Font.Charset = EASTEUROPE_CHARSET
       Font.Color = clWindowText

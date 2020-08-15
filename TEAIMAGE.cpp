@@ -13,7 +13,7 @@ WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 	{
 		Application->Initialize();
 		Application->Title = "SSTSOFT.QBPaint Converter";
-         Application->CreateForm(__classid(TForm1), &Form1);
+        Application->CreateForm(__classid(TForm1), &Form1);
         Application->CreateForm(__classid(TAboutForm), &AboutForm);
         Application->CreateForm(__classid(TForm2), &Form2);
         Application->Run();

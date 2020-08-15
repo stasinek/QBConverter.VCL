@@ -11,8 +11,8 @@
     <DEFFILE value=""/>
     <RESDEPEN value="$(RESFILES) Unit1.dfm Unit2.dfm ..\..\FORM_TEMPLATES\About_frm.dfm"/>
     <LIBFILES value=""/>
-    <LIBRARIES value="VCLX50.lib bcbsmp50.lib Vcl50.lib dclusr50.lib vclx.lib vcl.lib"/>
-    <SPARELIBS value="vcl.lib vclx.lib dclusr50.lib Vcl50.lib bcbsmp50.lib VCLX50.lib"/>
+    <LIBRARIES value="VCLX50.lib bcbsmp50.lib Vcl50.lib dclusr50.lib vcl.lib"/>
+    <SPARELIBS value="vcl.lib dclusr50.lib Vcl50.lib bcbsmp50.lib VCLX50.lib"/>
     <PACKAGES value="db.bpi vcldb.bpi bde.bpi vcldbx.bpi"/>
     <PATHCPP value=".;..\..\FORM_TEMPLATES"/>
     <PATHPAS value=".;"/>
@@ -21,7 +21,7 @@
     <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
     <RELEASELIBPATH value="$(BCB)\lib\release"/>
     <LINKER value="ilink32"/>
-    <USERDEFINES value=""/>
+    <USERDEFINES value="_DEBUG"/>
     <SYSDEFINES value="NO_STRICT"/>
     <MAINSOURCE value="TEAIMAGE.cpp"/>
     <INCLUDEPATH value="..\..\FORM_TEMPLATES;..\..;..;$(BCB)\include;$(BCB)\include\vcl;..\..\PACKAGES;&quot;D:\CBuilder6\Projects\Lib\&quot;"/>
@@ -30,17 +30,17 @@
     <WARNOPTSTR value=""/>
   </MACROS>
   <OPTIONS>
-    <IDLCFLAGS value="-I$(BCB)\include -I$(BCB)\include\vcl 
-      -I&quot;D:\My Projects\aktualne_prc++\OBSOLETE_BCB\PACKAGES\.&quot; 
-      -I&quot;C:\Program Files\Borland\CBuilder5\Projects\Lib\.&quot; -src_suffix cpp -boa"/>
+    <IDLCFLAGS value="-I..\..\FORM_TEMPLATES -I..\.. -I.. -I$(BCB)\include -I$(BCB)\include\vcl 
+      -I..\..\PACKAGES -I&quot;D:\CBuilder6\Projects\Lib\.&quot; -src_suffix cpp -D_DEBUG 
+      -no_tie -boa"/>
     <CFLAG1 value="-O2 -H=c:\PROGRA~1\borland\CBUILD~1\lib\vcld.csm -Hc -Q -Vx -Ve -xf -xp 
       -VF -C -ff -X- -ps -a8 -6 -b -d -k -y -v -vi- -c -tWM"/>
     <CFLAG2 value=""/>
     <CFLAG3 value=""/>
-    <PFLAGS value="-$YD -$W -$R -$Q -$A4 -v -JPHNV -M -JPHNE"/>
+    <PFLAGS value="-$Y+ -$W -$T -$R -$Q -$B -$A4 -v -JPHNV -M -JPHNE"/>
     <RFLAGS value=""/>
-    <AFLAGS value="/mx /w0 /zd"/>
-    <LFLAGS value="-D&quot;&quot; -Rr -Gz -aa -Tpe -GD -s -M -v"/>
+    <AFLAGS value="/mx /w2 /zi"/>
+    <LFLAGS value="-D&quot;&quot; -aa -Tpe -GD -x -M -v"/>
     <IFLAGS value=""/>
   </OPTIONS>
   <LINKER>
@@ -55,7 +55,7 @@ AutoIncBuild=1
 MajorVer=1
 MinorVer=0
 Release=1
-Build=53
+Build=55
 Debug=1
 PreRelease=0
 Special=0
@@ -67,9 +67,9 @@ CodePage=1250
 [Version Info Keys]
 CompanyName=SSTSOFT.pl
 FileDescription=
-FileVersion=1.0.1.53
+FileVersion=1.0.1.55
 InternalName=
-LegalCopyright=
+LegalCopyright=Stanis3aw Stasiak
 LegalTrademarks=
 OriginalFilename=
 ProductName=QBConverter
@@ -111,8 +111,9 @@ Item13=$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages
 Item14=..\autosrv;$(BCB)\lib\obj;$(BCB)\lib
 
 [HistoryLists\hlConditionals]
-Count=1
-Item0=USEPACKAGES
+Count=2
+Item0=_DEBUG
+Item1=USEPACKAGES
 
 [Debugging]
 DebugSourceDirs=
@@ -127,5 +128,16 @@ RemoteDebug=0
 [Compiler]
 ShowInfoMsgs=1
 LinkDebugVcl=1
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=0
+AddClientUnit=0
+PrecompiledHeaders=0
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
   </IDEOPTIONS>
 </PROJECT>

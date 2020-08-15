@@ -17,7 +17,8 @@ __published:	// IDE-managed Components
     TPanel *Panel1;
     TCSpinEdit *CSpinEdit1;
     TSpeedButton *SpeedButton1;
-    TSpeedButton *SpeedButton2;void __fastcall SpeedButton1Click(TObject *Sender);
+    TSpeedButton *SpeedButton2;
+    TLabel *Label1;void __fastcall SpeedButton1Click(TObject *Sender);
     void __fastcall SpeedButton2Click(TObject *Sender);
     
 private:	// User declarations

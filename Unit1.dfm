@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 526
-  Top = 213
+  Left = 174
+  Top = 138
   AutoScroll = False
   Caption = 'QBPaint Converter VCL'
   ClientHeight = 269
@@ -2998,7 +2998,7 @@ object Form1: TForm1
       OnClick = Skala111Click
     end
     object Stretchtowindow1: TMenuItem
-      Caption = 'Stretch to window'
+      Caption = 'Skalowanie do rozmiaru okna'
       RadioItem = True
       OnClick = Stretch1Click
     end
@@ -3010,7 +3010,7 @@ object Form1: TForm1
       OnClick = Exit1Click
     end
     object About1: TMenuItem
-      Caption = '&About and license'
+      Caption = 'INFORMACJE + LICENCJA'
       OnClick = About1Click
     end
   end
@@ -3033,18 +3033,18 @@ object Form1: TForm1
     Left = 80
     Top = 152
     object Open2: TMenuItem
-      Caption = 'Open'
+      Caption = '&OPEN'
       OnClick = Open1Click
     end
     object Save2: TMenuItem
-      Caption = 'Save as...'
+      Caption = '&SAVE AS...'
       OnClick = SaveAs1Click
     end
     object Scale1: TMenuItem
       Caption = '|'
     end
     object Exit2: TMenuItem
-      Caption = 'EXIT'
+      Caption = 'E&XIT'
       OnClick = Exit1Click
     end
   end

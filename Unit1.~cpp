@@ -9,7 +9,6 @@
 //---------------------------------------------------------------------------
 #pragma resource "*.dfm"
 TForm1 *Form1;
-
 String NazwaPlikuSave = "";
 String NazwaPliku = "";
 unsigned __int32 Dlugo = 0;
@@ -20,7 +19,7 @@ bool Nad = false; // w orginalnych rozmiarach?
 unsigned __int32 XMax = 250;
 unsigned __int32 YMax = 200;
 Graphics::TBitmap* Bm = new Graphics::TBitmap;
-char* Linia= new char[1024];
+char* Linia = new char[1024];
 
 //---------------------------------------------------------------------------
 __fastcall TForm1::TForm1(TComponent* Owner)
@@ -41,7 +40,8 @@ Robie=true;
 try
 {
 if (!OpenDialog1->Execute())
-    {Robie = false;
+    {
+     Robie = false;
      return;
     }
 First = true;
@@ -54,14 +54,14 @@ if (UpperCase(NazwaPliku.SubString(OpenDialog1->FileName.Length()-2,3))!="GFT")
     SaveDialog1->FileName = OpenDialog1->FileName;
     Image1->Picture->LoadFromFile(NazwaPliku);
 
-    Image1->Left=1;
+    Image1->Left = 1;
     XMax = Image1->Picture->Width;
     Image1->Width = Image1->Picture->Width;
     Form1->ClientWidth = XMax+2;
-    Image1->Top=1;
+    Image1->Top = 1;
     YMax = Image1->Picture->Height;
     Image1->Height = Image1->Picture->Height;
-    Form1->ClientHeight = YMax+22;
+    Form1->ClientHeight = YMax + 22;
 
     ProgressBar1->Width = Form1->ClientWidth - 8;
    }
@@ -69,7 +69,6 @@ else
    {
     NazwaPlikuSave = OpenDialog1->FileName;
     SaveDialog1->FileName = OpenDialog1->FileName;
-
     ifstream plik2; 								// odczyt formatu cpalonga
     // Open file
     plik2.open(OpenDialog1->FileName.c_str());
@@ -156,8 +155,8 @@ else
 catch (...) { First = false; ShowMessage("Unknown ERROR"); }
 
 Form1->Caption= "QBPaint Converter "+ ExtractFileName(NazwaPliku)+
-                " "+(String)Image1->Picture->Width + " X " + (String)Image1->Picture->Height + " | "+
-                (String)Image1->Width + " X " +(String)Image1->Height;
+                " "+(AnsiString)Image1->Picture->Width + " X " + (AnsiString)Image1->Picture->Height + " | "+
+                (AnsiString)Image1->Width + " X " +(AnsiString)Image1->Height;
 First = false;
 Robie = false;
 FormResize(Sender);
@@ -257,7 +256,7 @@ FormResize(Sender);
 //---------------------------------------------------------------------------
 void __fastcall TForm1::About1Click(TObject *Sender)
 {
-Form1->Caption = AboutForm->ShowModal();//!=mrOk) Close();
+if (AboutForm->ShowModal()!=mrOk) Close();
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm1::SaveAs1Click(TObject *Sender)
@@ -268,7 +267,7 @@ Robie=true;
 NazwaPlikuSave = SaveDialog1->FileName;
 Dlugo = SaveDialog1->FileName.Length();
 NazwaPlikuSave.Delete(Dlugo-2,3);
-NazwaPlikuSave.Insert("gft",Dlugo-2);
+NazwaPlikuSave.Insert("GFT",Dlugo-2);
 SaveDialog1->FileName = NazwaPlikuSave;
 
 if (!SaveDialog1->Execute())
@@ -293,48 +292,48 @@ if (First==true)
 
 if (Stretchtowindow1->Checked==true)
    {
-    Image1->Height = Bevel1->Height-2;
-    Image1->Width  = Bevel1->Width-2;
+    Image1->Height = Bevel1->Height - 2;
+    Image1->Width  = Bevel1->Width - 2;
     Image1->Left   = 1;
     Image1->Top    = 1;
     return;
    }
-if ((Bevel1->Width-2) > Image1->Width && (unsigned __int32)Bevel1->Height>=Bevel1->Width*YMax/XMax) // powiêkszanie
+if ((Bevel1->Width-2) > Image1->Width && (unsigned __int32)Bevel1->Height >= (Bevel1->Width * YMax) / XMax) // powiêkszanie
    {
-    Image1->Height = (Bevel1->Width-2)*YMax/XMax;
-    Image1->Width  = Bevel1->Width-2;
-    Image1->Top    = ((Bevel1->Height-2)-Image1->Height)/2;
+    Image1->Height = ((Bevel1->Width-2) * YMax) / XMax;
+    Image1->Width  =   Bevel1->Width-2;
+    Image1->Top    =  (Bevel1->Height-2-Image1->Height) / 2 + 1;
     return;
    }
-if ((Bevel1->Height-2)>Image1->Height && (unsigned __int32)Bevel1->Width>=Bevel1->Height*XMax/YMax)
+if ((Bevel1->Height-2)>Image1->Height && (unsigned __int32)Bevel1->Width >= (Bevel1->Height * XMax) / YMax)
    {
-    Image1->Height = Bevel1->Height-2;
-    Image1->Width  = (Bevel1->Height-2)*XMax/YMax;
-    Image1->Left   = ((Bevel1->Width-2)-Image1->Width)/2+1;
+    Image1->Height =   Bevel1->Height-2;
+    Image1->Width  = ((Bevel1->Height-2) * XMax) / YMax;
+    Image1->Left   =  (Bevel1->Width-2-Image1->Width) / 2 + 1;
     return;
    }
-if (XMax>(unsigned __int32)Bevel1->Width-2)   // pomniejszanie
+if (XMax > (unsigned __int32)Bevel1->Width-2)   // pomniejszanie
    {
-    Image1->Height = Image1->Width * YMax/XMax;
-    Image1->Width  = Bevel1->Width - 2;
+    Image1->Height = (Image1->Width * YMax) / XMax;
+    Image1->Width  =  Bevel1->Width - 2;
    }
 if (Image1->Height > Bevel1->Height - 2)
    {
-    Image1->Height = Bevel1->Height - 2;
-    Image1->Width  = Image1->Height * XMax/YMax;
+    Image1->Height =  Bevel1->Height - 2;
+    Image1->Width  = (Image1->Height * XMax) / YMax;
    }
-if (YMax>(unsigned __int32)Bevel1->Height-2)
+if (YMax > (unsigned __int32)Bevel1->Height-2)
    {
-    Image1->Height = Bevel1->Height - 2;
-    Image1->Width  = Image1->Height * XMax/YMax;
+    Image1->Height =  Bevel1->Height - 2;
+    Image1->Width  = (Image1->Height * XMax) / YMax;
    }
-if (Image1->Width>Bevel1->Width - 2)
+if (Image1->Width > Bevel1->Width - 2)
    {
-    Image1->Height = Image1->Width * YMax/XMax;
-    Image1->Width  = Bevel1->Width - 2;
+    Image1->Height = (Image1->Width * YMax) / XMax;
+    Image1->Width  =  Bevel1->Width - 2;
    }
-Image1->Left = ((Bevel1->Width-2)-Image1->Width)/2 + 1;
- Image1->Top = ((Bevel1->Height-2)-Image1->Height)/2 + 1;
+Image1->Left = (Bevel1->Width-2-Image1->Width)/2 + 1;
+ Image1->Top = (Bevel1->Height-2-Image1->Height)/2 + 1;
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm1::FormClose(TObject *Sender, TCloseAction &Action)
@@ -362,7 +361,7 @@ Form2->Show();
 
 void __fastcall TForm1::FormShow(TObject *Sender)
 {
-//if (AboutForm->ShowModal()!=mrOk) Close();
+if (AboutForm->ShowModal()!=mrOk) Close();
 }
 //---------------------------------------------------------------------------
 
