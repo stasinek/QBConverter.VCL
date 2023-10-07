@@ -41,6 +41,7 @@ __published:	// IDE-managed Components
     TMenuItem *Exit2;
     TMenuItem *Scale1;
     TMenuItem *Stretchtowindow1;
+    TMenuItem *Skala1;
 	void __fastcall Exit1Click(TObject *Sender);
 	void __fastcall Open1Click(TObject *Sender);
 	void __fastcall Save1Click(TObject *Sender);

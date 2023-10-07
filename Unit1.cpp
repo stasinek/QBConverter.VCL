@@ -256,7 +256,7 @@ FormResize(Sender);
 //---------------------------------------------------------------------------
 void __fastcall TForm1::About1Click(TObject *Sender)
 {
-if (AboutForm->ShowModal()!=mrOk) Close();
+if (About_form->ShowModal()!=mrOk) Close();
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm1::SaveAs1Click(TObject *Sender)
@@ -361,9 +361,10 @@ Form2->Show();
 
 void __fastcall TForm1::FormShow(TObject *Sender)
 {
-if (AboutForm->ShowModal()!=mrOk) Close();
+if (About_form->ShowModal()!=mrOk) Close();
 }
 //---------------------------------------------------------------------------
+
 
 
 

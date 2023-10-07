@@ -11,8 +11,8 @@
     <DEFFILE value=""/>
     <RESDEPEN value="$(RESFILES) Unit1.dfm Unit2.dfm ..\..\FORM_TEMPLATES\About_frm.dfm"/>
     <LIBFILES value=""/>
-    <LIBRARIES value="VCLX50.lib bcbsmp50.lib Vcl50.lib dclusr50.lib vcl.lib"/>
-    <SPARELIBS value="vcl.lib dclusr50.lib Vcl50.lib bcbsmp50.lib VCLX50.lib"/>
+    <LIBRARIES value="sstdcl50.lib VCLX50.lib bcbsmp50.lib Vcl50.lib dclusr50.lib vcl.lib"/>
+    <SPARELIBS value="vcl.lib dclusr50.lib Vcl50.lib bcbsmp50.lib VCLX50.lib sstdcl50.lib"/>
     <PACKAGES value="db.bpi vcldb.bpi bde.bpi vcldbx.bpi"/>
     <PATHCPP value=".;..\..\FORM_TEMPLATES"/>
     <PATHPAS value=".;"/>
@@ -34,13 +34,13 @@
       -I..\..\PACKAGES -I&quot;D:\CBuilder6\Projects\Lib\.&quot; -src_suffix cpp -D_DEBUG 
       -no_tie -boa"/>
     <CFLAG1 value="-O2 -H=c:\PROGRA~1\borland\CBUILD~1\lib\vcld.csm -Hc -Q -Vx -Ve -xf -xp 
-      -VF -C -ff -X- -ps -a8 -6 -b -d -k -y -v -vi- -c -tWM"/>
+      -VF -C -ff -X- -a8 -6 -b -d -k -y -v -vi- -c -tWM"/>
     <CFLAG2 value=""/>
     <CFLAG3 value=""/>
-    <PFLAGS value="-$Y+ -$W -$T -$R -$Q -$B -$A4 -v -JPHNV -M -JPHNE"/>
+    <PFLAGS value="-$Y+ -$W -$U -$T -$R -$Q -$B -$A4 -v -JPHNV -M -JPHNE"/>
     <RFLAGS value=""/>
     <AFLAGS value="/mx /w2 /zi"/>
-    <LFLAGS value="-D&quot;&quot; -aa -Tpe -GD -x -M -v"/>
+    <LFLAGS value="-D&quot;&quot; -aa -Tpe -GD -s -M -v"/>
     <IFLAGS value=""/>
   </OPTIONS>
   <LINKER>
@@ -55,7 +55,7 @@ AutoIncBuild=1
 MajorVer=1
 MinorVer=0
 Release=1
-Build=55
+Build=57
 Debug=1
 PreRelease=0
 Special=0
@@ -66,10 +66,10 @@ CodePage=1250
 
 [Version Info Keys]
 CompanyName=SSTSOFT.pl
-FileDescription=
-FileVersion=1.0.1.55
-InternalName=
-LegalCopyright=Stanis3aw Stasiak
+FileDescription=QBasic Paint Converter
+FileVersion=1.0.1.57
+InternalName=QBasic Paint Converter
+LegalCopyright=Stanislaw Stasiak
 LegalTrademarks=
 OriginalFilename=
 ProductName=QBConverter
@@ -128,16 +128,5 @@ RemoteDebug=0
 [Compiler]
 ShowInfoMsgs=1
 LinkDebugVcl=1
-LinkCGLIB=0
-
-[CORBA]
-AddServerUnit=0
-AddClientUnit=0
-PrecompiledHeaders=0
-
-[Language]
-ActiveLang=
-ProjectLang=
-RootDir=
   </IDEOPTIONS>
 </PROJECT>

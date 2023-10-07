@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 174
-  Top = 138
+  Left = 476
+  Top = 200
   AutoScroll = False
   Caption = 'QBPaint Converter VCL'
   ClientHeight = 269
@@ -3039,6 +3039,12 @@ object Form1: TForm1
     object Save2: TMenuItem
       Caption = '&SAVE AS...'
       OnClick = SaveAs1Click
+    end
+    object Skala1: TMenuItem
+      Caption = 'CHANGE SCALE...'
+      OnClick = Skala111Click
+    end
+    object TMenuItem
     end
     object Scale1: TMenuItem
       Caption = '|'

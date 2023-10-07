@@ -11,48 +11,62 @@ File_8=SourceModule,'D:\My Projects\aktualne prc++\x86_libraries\SSTSOFT\text\ts
 File_9=SourceModule,'D:\My Projects\aktualne prc++\x86_libraries\SSTSOFT\mem\tsoft_mem32.h',0,1,25,16,52,0,0
 
 [Modules]
-Module0=H:\Drive\My Projects\OBSOLETE\FORM_TEMPLATES\About_frm.cpp
-Module1=H:\Drive\My Projects\OBSOLETE\PROGS\QBConverter.VCL\Unit1.cpp
-Module2=H:\Drive\My Projects\OBSOLETE\PROGS\QBConverter.VCL\Unit2.cpp
-Module3=C:\PROGRAM FILES\BORLAND\CBUILDER5\INCLUDE\VCL\forms.hpp
-Count=4
+Module0=E:\SRC\OBSOLETE\PACKAGES\EXEINFO.CPP
+Module1=C:\PROGRAM FILES\BORLAND\CBUILDER5\INCLUDE\VCL\dstring.h
+Module2=E:\MEGA\MEGAsync\My Projects\OBSOLETE\FORM_TEMPLATES\About_frm.cpp
+Module3=E:\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\QBConverter.VCL\Unit2.cpp
+Module4=E:\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\QBConverter.VCL\Unit1.cpp
+Module5=C:\PROGRAM FILES\BORLAND\CBUILDER5\INCLUDE\VCL\forms.hpp
+Count=6
 EditWindowCount=1
 
-[H:\Drive\My Projects\OBSOLETE\FORM_TEMPLATES\About_frm.cpp]
+[E:\SRC\OBSOLETE\PACKAGES\EXEINFO.CPP]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\PROGRAM FILES\BORLAND\CBUILDER5\INCLUDE\VCL\dstring.h]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[E:\MEGA\MEGAsync\My Projects\OBSOLETE\FORM_TEMPLATES\About_frm.cpp]
 ModuleType=SourceModule
 FormState=1
 FormOnTop=0
 
-[H:\Drive\My Projects\OBSOLETE\PROGS\QBConverter.VCL\Unit1.cpp]
+[E:\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\QBConverter.VCL\Unit2.cpp]
 ModuleType=SourceModule
 FormState=1
 FormOnTop=1
 
-[H:\Drive\My Projects\OBSOLETE\PROGS\QBConverter.VCL\Unit2.cpp]
+[E:\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\QBConverter.VCL\Unit1.cpp]
 ModuleType=SourceModule
 FormState=1
-FormOnTop=1
+FormOnTop=0
 
 [C:\PROGRAM FILES\BORLAND\CBUILDER5\INCLUDE\VCL\forms.hpp]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[H:\Drive\My Projects\OBSOLETE\FORM_TEMPLATES\ProjectGroup1.bpg]
+[C:\Windows\SYSTEM32\ProjectGroup1.bpg]
 FormState=0
 FormOnTop=0
 
-[H:\Drive\My Projects\OBSOLETE\PROGS\QBConverter.VCL\TEAIMAGE.bpr]
+[E:\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\QBConverter.VCL\TEAIMAGE.bpr]
 FormState=0
 FormOnTop=0
 
 [EditWindow0]
-ViewCount=4
-CurrentView=3
+ViewCount=6
+CurrentView=5
 View0=0
 View1=1
 View2=2
 View3=3
+View4=4
+View5=5
 MessageView=MessageView@EditWindow0
 Create=1
 Visible=1
@@ -62,16 +76,16 @@ Top=229
 Width=1081
 Height=482
 MaxLeft=-4
-MaxTop=97
+MaxTop=100
 MaxWidth=1288
-MaxHeight=679
+MaxHeight=676
 ClientWidth=1280
-ClientHeight=652
+ClientHeight=649
 LeftPanelSize=0
 RightPanelSize=0
-BottomPanelSize=85
+BottomPanelSize=0
 BottomPanelClients=MessageView@EditWindow0
-BottomPanelData=000004000000000055000000000000000000050000000000000100000000550000000B0000004D65737361676556696577FFFFFFFF
+BottomPanelData=00000400010000000B0000004D657373616765566965775500000000000000000005000000000000FFFFFFFF
 
 [View0]
 Module=C:\PROGRAM FILES\BORLAND\CBUILDER5\INCLUDE\VCL\forms.hpp
@@ -81,24 +95,38 @@ TopLine=1
 LeftCol=1
 
 [View1]
-Module=H:\Drive\My Projects\OBSOLETE\PROGS\QBConverter.VCL\Unit1.cpp
+Module=E:\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\QBConverter.VCL\Unit1.cpp
 CursorX=1
-CursorY=1
-TopLine=1
+CursorY=370
+TopLine=369
 LeftCol=1
 
 [View2]
-Module=H:\Drive\My Projects\OBSOLETE\PROGS\QBConverter.VCL\Unit2.cpp
+Module=E:\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\QBConverter.VCL\Unit2.cpp
 CursorX=1
 CursorY=1
 TopLine=1
 LeftCol=1
 
 [View3]
-Module=H:\Drive\My Projects\OBSOLETE\FORM_TEMPLATES\About_frm.cpp
+Module=E:\MEGA\MEGAsync\My Projects\OBSOLETE\FORM_TEMPLATES\About_frm.cpp
 CursorX=1
-CursorY=152
-TopLine=139
+CursorY=26
+TopLine=15
+LeftCol=1
+
+[View4]
+Module=C:\PROGRAM FILES\BORLAND\CBUILDER5\INCLUDE\VCL\dstring.h
+CursorX=1
+CursorY=68
+TopLine=46
+LeftCol=1
+
+[View5]
+Module=E:\SRC\OBSOLETE\PACKAGES\EXEINFO.CPP
+CursorX=23
+CursorY=242
+TopLine=217
 LeftCol=1
 
 [Watches]
@@ -106,7 +134,8 @@ Count=1
 Watch0='lpDestination',8,0,18,1,1
 
 [Breakpoints]
-Count=0
+Count=1
+Breakpoint0='E:\MEGA\MEGAsync\My Projects\OBSOLETE\FORM_TEMPLATES\About_frm.cpp',25,'',0,1,'',1,0,0,'',1,'','',''
 
 [AddressBreakpoints]
 Count=0
@@ -128,7 +157,7 @@ ClientHeight=78
 
 [ProjectManager]
 Create=1
-Visible=0
+Visible=1
 State=0
 Left=369
 Top=372
@@ -176,8 +205,8 @@ ClientHeight=60
 Create=1
 Visible=1
 State=0
-Left=56
-Top=179
+Left=0
+Top=180
 Width=190
 Height=381
 MaxLeft=-1
@@ -194,9 +223,25 @@ ExpandedItems=Font,Font.Style
 HiddenCategories=
 ShowStatusBar=1
 
+[CallStackWindow]
+Create=1
+Visible=0
+State=0
+Left=493
+Top=319
+Width=294
+Height=161
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=286
+ClientHeight=137
+TBDockHeight=161
+LRDockWidth=294
+Dockable=1
+
 [MessageView@EditWindow0]
 Create=1
-Visible=1
+Visible=0
 State=0
 Left=12
 Top=0

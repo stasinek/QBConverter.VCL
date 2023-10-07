@@ -1,6 +1,6 @@
 object Form2: TForm2
-  Left = 254
-  Top = 370
+  Left = 413
+  Top = 140
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Skala...'
@@ -25,7 +25,7 @@ object Form2: TForm2
     BevelOuter = bvLowered
     TabOrder = 0
     object SpeedButton1: TSpeedButton
-      Left = 139
+      Left = 135
       Top = 8
       Width = 41
       Height = 37
@@ -53,9 +53,9 @@ object Form2: TForm2
       OnClick = SpeedButton1Click
     end
     object SpeedButton2: TSpeedButton
-      Left = 183
+      Left = 180
       Top = 8
-      Width = 37
+      Width = 40
       Height = 37
       Anchors = [akTop, akRight, akBottom]
       Glyph.Data = {
@@ -92,7 +92,7 @@ object Form2: TForm2
       Left = 8
       Top = 8
       Width = 89
-      Height = 37
+      Height = 35
       TabStop = True
       Anchors = [akLeft, akTop, akRight, akBottom]
       DragCursor = crDefault

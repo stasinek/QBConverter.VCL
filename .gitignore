@@ -31,11 +31,8 @@ _ReSharper*/
 [Tt]est[Rr]esult*
 *.dll
 *.obj
-*.~*
 *.exe
 *.tds
-*.ils
-*.il*
+*.il?
 *.map
 journal*.*
-*.map
