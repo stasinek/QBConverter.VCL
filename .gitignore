@@ -1,8 +1,6 @@
 *.obj
 *.~*
 *.exe
-*.tds
-*.ils
 #ignore thumbnails created by windows
 Thumbs.db
 #Ignore files build by Visual Studio
@@ -19,7 +17,6 @@ Thumbs.db
 *.tlh
 *.bak
 *.cache
-*.ilk
 *.log
 [Bb]in
 [Dd]ebug*/
